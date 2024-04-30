@@ -33,10 +33,11 @@ def check_all_messages(message):
 
 # Responses -------------------------------------------------------------------------------------------
     response('Hello', ['hello', 'hi', 'sup', 'hey', 'heyo'], single_response=True)
-    response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], required_words=['how'])
+    response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], single_response=False, required_words=['how'])
+    response('Goodbye', ['bye', 'goodbye', 'cya', 'see ya'], single_response=True)
 
     best_match = max(highest_prob_list, key=highest_prob_list.get)
-    print(highest_prob_list)
+    #print(highest_prob_list)
         
     return best_match
 
